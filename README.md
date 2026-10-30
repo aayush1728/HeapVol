@@ -117,6 +117,8 @@ python -m pytest -q
 | Heaps | 3 polygons, EPSG:4326 (reprojected to EPSG:32644 by the tool) |
 | Grids aligned | Yes — same CRS, origin, pixel size and size |
 
+![QGIS Processing log](docs/images/qgis_run_log.png)
+
 ### Volumes
 
 | Heap | Area (m²) | Fill (m³) | Cut (m³) | Net (m³) | NoData px |
