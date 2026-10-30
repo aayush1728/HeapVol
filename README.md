@@ -154,7 +154,6 @@ Runtime: ~2 s for all three heaps (QGIS 3.40.10, Windows).
 - **Frozen dataclass result (`VolResult`).** Named, typed, immutable fields instead of an anonymous tuple.
 - **Fail fast with clear messages.** CRS mismatch, geographic CRS, unaligned grids and unreadable files stop the run with a message that says what is wrong and how to fix it.
 - **Swapped-input warning.** While testing, I swapped the two DEMs myself and got a negative volume with no error, because both inputs look identical to QGIS. The tool now warns *"Are the DEM and Base DEM inputs swapped?"* when every heap lies entirely below the base. It is a warning, not an error, because a negative net is legitimate for a pit.
-- **Progress and cancel support** through Processing `feedback`, so long runs can be monitored and stopped.
 
 ## 6. Limitations
 
