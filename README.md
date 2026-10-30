@@ -128,7 +128,7 @@ python -m pytest -q
 | 2 | TODO | 6,502.59 | 0.00 | 6,502.59 | 0 |
 | **Total** | | **28,643.26** | **0.00** | **28,643.26** | |
 
-Runtime: ~2.3 s for all three heaps (QGIS 3.40.10, Windows).
+Runtime: ~2 s for all three heaps (QGIS 3.40.10, Windows).
 
 **Cross-check:** heap 0 was also computed independently in a Jupyter notebook with rasterio + geopandas — identical fill (16,212.56 m³). The number of pixels inside heap 0 (584,045) agrees with polygon area ÷ pixel area (584,015) to 0.005 %.
 
