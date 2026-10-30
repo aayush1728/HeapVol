@@ -148,8 +148,6 @@ Runtime: ~2 s for all three heaps (QGIS 3.40.10, Windows).
 
 - **Maths separated from QGIS.** `core/volume.py` contains only NumPy. It is unit-tested without QGIS and can be reused elsewhere (a web service, a batch job). `heap_processing.py` is a thin adapter: it reads layers, validates, rasterizes and calls `compute_vol()`.
 - **Only NumPy + GDAL at runtime.** Both ship with QGIS, so users install nothing.
-- **Processing algorithm rather than a standalone script.** Users get the standard QGIS dialog, batch mode, the Graphical Modeler and `processing.run()` for free.
-- **Feature source input.** Supports *Selected features only*, so a user can measure just the heap they selected.
 - **Reproject vectors, not rasters.** Polygon vertices transform exactly; resampling 18 million DEM pixels would add interpolation error and take longer.
 - **Masked arrays for NoData.** The mask carries through `DEM − Base`, so NoData in either raster is excluded automatically. Skipped pixels are counted per heap and reported, so users know when a volume may be underestimated.
 - **float64 accumulation.** The DEMs are float32; height differences are summed in float64 to avoid rounding error over hundreds of thousands of pixels.
